@@ -295,3 +295,126 @@ template {
 [hidden] {
   display: none;
 }
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background-color: #e6e3d4;
+}
+.container {
+  width: 88%;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .page {
+    background-color: #fff;
+  }
+  .page--animals {
+    background-image: url("/img/bg/animalsBg.jpg");
+  }
+  .page--city {
+    background-image: url("/img/bg/cityBg.jpg");
+  }
+  .container {
+    width: 70%;
+    background-color: #e6e3d4;
+  }
+}
+.word__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.word__letter {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #fff;
+}
+.word__letter[data-hidden="true"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.word__letter[data-hidden="true"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  margin-left: -18px;
+  background-image: url("/img/questionMark.svg");
+}
+.letters-buttons__item[data-activated="true"] {
+  background-color: red;
+}
+.letters-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 50px;
+  margin-top: 50px;
+}
+.letters-buttons__item {
+  margin-top: 10px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-theme__wrapper {
+  width: 50%;
+  min-height: 50%;
+  padding: 50px;
+  background-color: burlywood;
+}
+.modal-theme__header {
+  font-size: 30px;
+}

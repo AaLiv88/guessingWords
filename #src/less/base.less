@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background-color: @beige-bg;
+}
+
+.container {
+  width: 88%;
+  height: 100%;
+
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page {
+    background-color: #fff;
+    
+    &--animals {
+      background-image: url("/img/bg/animalsBg.jpg");
+    }
+
+    &--city {
+      background-image: url("/img/bg/cityBg.jpg");
+    }
+  }
+
+  .container {
+    width: 70%;
+    background-color: @beige-bg;
+  }
+}

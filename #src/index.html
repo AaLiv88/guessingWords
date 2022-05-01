@@ -5,13 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400;1,500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
-  <h1>123</h1>
-  <img src=/img/img.jpg" alt="">
+  <main class="page page--city">
+    <div class="container">
 
-  <script src="/js/words.json"></script>
-  <script src="/js/main.js"></script>
+      <div class="info">
+        <div class="info__wins"></div>
+        <div class="info__losses"></div>
+
+        <div class="user-guesses">
+          осталось попыток:
+          <span class="user-guesses__count">
+
+          </span>
+        </div>
+
+      </div>
+
+      <div class="word">
+        <div class="word__wrapper">
+
+        </div>
+      </div>
+
+      <div class="letters-buttons">
+
+      </div>
+
+    </div>
+  </main>
+
+  @@include("parts/modalChoosingTheme.html")
+
+  <script src="/js/script.js"></script>
 </body>
 </html>

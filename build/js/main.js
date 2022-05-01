@@ -1,1 +1,0 @@
-const wordsArr = JSON.parse();

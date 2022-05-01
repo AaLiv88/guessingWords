@@ -15,7 +15,7 @@ import fileinclude from "gulp-file-include";
 import htmlmin from "gulp-htmlmin";
 
 //js
-
+import concat from "gulp-concat";
 
 //img
 import imagemin from "gulp-imagemin";
@@ -49,21 +49,22 @@ gulp.task("html", function() {
 
 gulp.task("js", function() {
   return gulp.src("./#src/js/**/*.*")
+    .pipe(concat("script.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(browserSync.stream());
 })
 
 gulp.task("img", function() {
-  return gulp.src('./#src/img/**/*.*')
+  return gulp.src("./#src/img/**/*.*")
     .pipe(imagemin(
     	{ optimizationLevel: 5 },
     ))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest("build/img"))
     .pipe(browserSync.stream());
 })
 
 gulp.task("svgSprites", function() {
-  return gulp.src('./#src/img/**/icon-*.svg')
+  return gulp.src("./#src/img/**/icon-*.svg")
     .pipe(svgSprite({
       mode: {
         stack: {
